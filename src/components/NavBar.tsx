@@ -42,7 +42,7 @@ export const NavBar: React.FC<NavBarProps> = ({ }) => {
   }
 
   return (
-    <Flex bg='black' alignItems='center' p={4}>
+    <Flex bg='black' alignItems='center' p={4} position='sticky'>
       <NextLink href='/'>
         <Link color='white' fontWeight={500} mr={2}>reddit-clone</Link>
       </NextLink>
