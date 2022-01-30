@@ -39,7 +39,7 @@ const Login: React.FC<{}> = ({ }) => {
                 <Link ml='auto'>Forgot password?</Link>
               </NextLink>
             </Flex>
-            <Button mt={4} type='submit' isLoading={isSubmitting} colorScheme='red'>Login</Button>
+            <Button mt={4} type='submit' isLoading={isSubmitting} colorScheme='blue'>Login</Button>
           </Form>
         )}
       </Formik>

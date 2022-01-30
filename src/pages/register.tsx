@@ -38,7 +38,7 @@ const Register: React.FC<registerProps> = ({ }) => {
             <Box mt={4}>
               <InputField type='password' name='password' label='Password' />
             </Box>
-            <Button mt={8} type='submit' isLoading={isSubmitting} colorScheme='teal'>register</Button>
+            <Button mt={8} type='submit' isLoading={isSubmitting} colorScheme='blue'>register</Button>
           </Form>
         )}
       </Formik>
