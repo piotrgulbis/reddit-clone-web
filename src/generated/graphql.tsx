@@ -143,8 +143,7 @@ export type ChangePasswordMutationVariables = Exact<{
 export type ChangePasswordMutation = { __typename?: 'Mutation', changePassword: { __typename?: 'UserResponse', errors?: Array<{ __typename?: 'FieldError', field: string, message: string }> | null | undefined, user?: { __typename?: 'User', id: number, username: string, email: string } | null | undefined } };
 
 export type CreatePostMutationVariables = Exact<{
-  title: Scalars['String'];
-  content: Scalars['String'];
+  input: PostInput;
 }>;
 
 
@@ -223,8 +222,8 @@ export function useChangePasswordMutation() {
   return Urql.useMutation<ChangePasswordMutation, ChangePasswordMutationVariables>(ChangePasswordDocument);
 };
 export const CreatePostDocument = gql`
-    mutation CreatePost($title: String!, $content: String!) {
-  createPost(input: {title: $title, content: $content}) {
+    mutation CreatePost($input: PostInput!) {
+  createPost(input: $input) {
     title
     content
     authorId

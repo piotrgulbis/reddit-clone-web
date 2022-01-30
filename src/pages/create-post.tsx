@@ -1,7 +1,10 @@
-import { Box, Button } from '@chakra-ui/react';
-import { Formik, Form } from 'formik';
+import { Form, Formik } from 'formik';
 import React from 'react';
+
+import { Box, Button } from '@chakra-ui/react';
+
 import { InputField } from '../components/InputField';
+import { TextareaField } from '../components/TextareaField';
 import { Wrapper } from '../components/Wrapper';
 
 const CreatePost: React.FC<{}> = ({}) => {
@@ -15,9 +18,11 @@ const CreatePost: React.FC<{}> = ({}) => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <InputField name='title' label='Title' />
+            <Box>
+              <InputField name='title' label='Title' />
+            </Box>
             <Box mt={4}>
-              <InputField name='content' label='Content' />
+              <TextareaField name='content' label='Content' />
             </Box>
             <Button mt={8} type='submit' isLoading={isSubmitting} colorScheme='blue'>Create Post</Button>
           </Form>
